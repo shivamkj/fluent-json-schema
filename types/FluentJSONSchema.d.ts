@@ -24,6 +24,7 @@ export interface BaseSchema<T> {
   isFluentSchema: boolean
   isFluentJSONSchema: boolean
   raw: (fragment: any) => T
+  nullable: () => T
 }
 
 export type TYPE =

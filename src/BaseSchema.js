@@ -445,7 +445,13 @@ const BaseSchema = (
       schema.then ? { then: schema.then } : undefined,
       schema.else ? { else: schema.else } : undefined
     )
-  }
+  },
+
+  /**
+   * Set property nullable to true
+   * @returns {FluentSchema}
+   */
+  nullable: () => setAttribute({ schema, ...options }, ['nullable', true]),
 })
 
 module.exports = {
